@@ -15174,6 +15174,91 @@
     }
   },
   {
+    "id": "eu.amazon.nova-2-lite-v1:0",
+    "name": "Nova 2 Lite (EU)",
+    "provider": "bedrock",
+    "family": "nova",
+    "created_at": "2024-12-01 00:00:00 UTC",
+    "context_window": 128000,
+    "max_output_tokens": 4096,
+    "knowledge_cutoff": null,
+    "modalities": {
+      "input": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output": [
+        "text"
+      ]
+    },
+    "capabilities": [
+      "function_calling",
+      "vision",
+      "streaming"
+    ],
+    "pricing": {
+      "text_tokens": {
+        "standard": {
+          "input_per_million": 0.33,
+          "output_per_million": 2.75
+        }
+      }
+    },
+    "metadata": {
+      "provider_name": "Amazon",
+      "model_arn": "arn:aws:bedrock:eu-central-1::foundation-model/amazon.nova-2-lite-v1:0",
+      "inference_types": [
+        "INFERENCE_PROFILE"
+      ],
+      "converse": {
+        "additionalRequestFieldsSchema": "{\"topK\":{\"type\":\"number\",\"default\":50,\"minimum\":1,\"maximum\":100},\"reasoningConfig\":{\"budgetTokens\":{\"type\":\"enum\",\"default\":\"low\",\"minimum\":10000,\"maximum\":64000,\"enum\":{\"low\":10000,\"medium\":40000,\"high\":64000},\"smartSyncEnabled\":true}}}",
+        "maxTokensDefault": null,
+        "maxTokensMaximum": 65535,
+        "reasoningSupported": {
+          "embedded": false
+        },
+        "stopSequencesDefault": null,
+        "systemRoleSupported": true,
+        "userDocumentTypesSupported": [
+          "pdf",
+          "docx"
+        ],
+        "userImageTypesSupported": [
+          "jpeg",
+          "png",
+          "gif",
+          "webp"
+        ],
+        "userVideoTypesSupported": [
+          "mkv",
+          "mov",
+          "mp4",
+          "webm",
+          "flv",
+          "mpeg",
+          "mpg",
+          "wmv",
+          "three_gp"
+        ]
+      },
+      "source": "models.dev",
+      "provider_id": "amazon-bedrock",
+      "open_weights": false,
+      "attachment": false,
+      "temperature": true,
+      "last_updated": "2024-12-01",
+      "cost": {
+        "input": 0.33,
+        "output": 2.75
+      },
+      "limit": {
+        "context": 128000,
+        "output": 4096
+      }
+    }
+  },
+  {
     "id": "us.amazon.nova-lite-v1:0",
     "name": "Nova Lite",
     "provider": "bedrock",

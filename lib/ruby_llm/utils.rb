@@ -24,12 +24,16 @@ module RubyLLM
       return unless value
 
       value.is_a?(Time) ? value : Time.parse(value.to_s)
+    rescue ArgumentError
+      nil
     end
 
     def to_date(value)
       return unless value
 
       value.is_a?(Date) ? value : Date.parse(value.to_s)
+    rescue ArgumentError
+      nil
     end
 
     def deep_merge(original, overrides)
